@@ -41,8 +41,9 @@ namespace BethanysPieShop.Controllers
         public ViewResult Index()
         {
             //Serilog
-            _logger.LogDebug("Loading home page");
-            
+          //  _logger.LogDebug("Loading home page");
+            _logger.LogInformation("Index page says hello");
+
             //Application Insights
             TelemetryClient tc = new TelemetryClient();
             tc.TrackPageView(new PageViewTelemetry("Insights: Bethany's Home page loaded") { Timestamp = DateTime.UtcNow });
